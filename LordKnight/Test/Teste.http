@@ -1,0 +1,32 @@
+### Listar o User
+GET https://localhost:5001/api/user/listar
+
+### Cadastrar um User
+POST https://localhost:5001/api/user/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Diogo",
+    "email" : "asd@asd.com",
+    "cpf" : "0123456789",
+    "senha" : "1000"
+}
+
+### Buscar um User pelo CPF
+GET https://localhost:5001/api/user/buscar/0123456789
+
+### Alterar um User
+PATCH  https://localhost:5001/api/user/alterar
+Content-Type: application/json
+
+{
+    "id" : 1,
+    "nome" : "Diogo Steinke Deconto Modificado Teste",
+    "email" : "asd@asd.com",
+    "cpf" : "0123456789",
+    "senha" : "1000"
+
+}
+
+### Deletar um user pelo Id
+DELETE https://localhost:5001/api/user/deletar/4
