@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+
 
 namespace API.Models
 {
@@ -12,5 +14,9 @@ namespace API.Models
         public string Cpf { get; set; }
         public string Senha { get; set; }
         public DateTime CriadoEm { get; set; }
+
+        public List<Personagem> Personagem { get; set; }
+
+
     }
 }

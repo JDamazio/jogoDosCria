@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace API.Models
 {
     public class Nivel
@@ -6,5 +8,8 @@ namespace API.Models
 
         public int Fase { get; set; }
         public int Boss { get; set; }
+
+        public List<Personagem> Personagem { get; set; }
+
     }
 }
