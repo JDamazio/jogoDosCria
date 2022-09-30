@@ -9,7 +9,6 @@ namespace API.Models
         public int Fase { get; set; }
         public int Boss { get; set; }
 
-        public List<Personagem> Personagem { get; set; }
-
+         //public virtual ICollection<Personagem> Personagens { get; set; }
     }
 }

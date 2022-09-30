@@ -1,16 +1,45 @@
+### Listar o personagem
+GET https://localhost:5001/api/personagem/listar
+
 ### Listar o User
 GET https://localhost:5001/api/user/listar
+
+
+### Cadastrar um Nivel
+POST https://localhost:5001/api/nivel/cadastrar
+Content-Type: application/json
+
+{
+    "fase" : "1",
+    "boss" : "1"
+}
+
+### Listar o nivel
+GET https://localhost:5001/api/nivel/listar
 
 ### Cadastrar um User
 POST https://localhost:5001/api/user/cadastrar
 Content-Type: application/json
 
 {
-    "nome" : "Diogo",
+    "nome" : "Eduardo",
     "email" : "asd@asd.com",
-    "cpf" : "0123456789",
+    "cpf" : "0123456789", 
     "senha" : "1000"
 }
+
+### Cadastrar um personagem
+POST https://localhost:5001/api/personagem/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Edwards",
+    "dano" : "2",
+    "userid" : "2",
+    "nivelid" : "2"
+}
+
+
 
 ### Buscar um User pelo CPF
 GET https://localhost:5001/api/user/buscar/0123456789
@@ -24,9 +53,10 @@ Content-Type: application/json
     "nome" : "Diogo Steinke Deconto Modificado Teste",
     "email" : "asd@asd.com",
     "cpf" : "0123456789",
-    "senha" : "1000"
+    "senha" : "1000",
+    "Personagem" : 1
 
 }
 
 ### Deletar um user pelo Id
-DELETE https://localhost:5001/api/user/deletar/4
+DELETE https://localhost:5001/api/user/deletar/1

@@ -10,9 +10,11 @@ namespace API.Models
         public string Nome { get; set; }
         public int Dano { get; set; }
 
-        public User User { get; set; }
-        public Nivel Nivel {get; set;}
-    
+        public virtual Nivel Nivel { get; set; }
+        public int NivelId { get; set; }
+
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
 
     }
 }

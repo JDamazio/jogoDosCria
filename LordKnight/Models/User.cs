@@ -15,8 +15,7 @@ namespace API.Models
         public string Senha { get; set; }
         public DateTime CriadoEm { get; set; }
 
-        public List<Personagem> Personagem { get; set; }
-
+        //public virtual ICollection<Personagem> Personagens { get; set; }
 
     }
 }
