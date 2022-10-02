@@ -30,6 +30,20 @@ namespace API.Controllers
             _context.SaveChanges();
             return Created("", personagem);
         }
+        // DELETE: /api/personagem/deletar/{id}
+        [HttpDelete]
+        [Route("deletar/{id}")]
+        public IActionResult Deletar([FromRoute] int id)
+        {
+            Personagem personagem = _context.Personagens.Find(id);
+            if (personagem != null)
+            {
+                _context.Personagens.Remove(personagem);
+                _context.SaveChanges();
+                return Ok(personagem);
+            }
+            return NotFound();
+        }
 
     }
 }
