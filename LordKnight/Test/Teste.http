@@ -35,8 +35,8 @@ Content-Type: application/json
 {
     "nome" : "Edwards",
     "dano" : "2",
-    "userid" : "2",
-    "nivelid" : "2"
+    "userid" : "1",
+    "nivelid" : "1"
 }
 
 
@@ -60,3 +60,19 @@ Content-Type: application/json
 
 ### Deletar um user pelo Id
 DELETE https://localhost:5001/api/user/deletar/1
+
+### Deletar um personagem pelo Id
+DELETE https://localhost:5001/api/personagem/deletar/3
+
+### Alterar um User
+PATCH  https://localhost:5001/api/personagem/alterar
+Content-Type: application/json
+
+{
+    "id" : "3",
+    "nome" : "rodrigo",
+    "dano" : "2",
+    "userid" : "1",
+    "nivelid" : "1"
+
+}
