@@ -1,0 +1,29 @@
+<table>
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Cpf</th>
+      <th>Senha</th>
+      <th>CriadoEm</th>
+      <th>Deletar</th>
+      <th>Alterar</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.nome }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.cpf }}</td>
+      <td>{{ user.senha }}</td>
+      <td>{{ user.criadoEm | date: "dd/MM/yyyy" }}</td>
+      <td>
+        <button (click)="deletar(user.id!)">Deletar</button>
+      </td>
+      <td>
+        <a routerLink="/pages/user/cadastrar/{{ user.id }}">
+          Alterar
+        </a>
+      </td>
+    </tr>
+    
+  </table>

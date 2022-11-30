@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>#</th>
+    <th>Nome</th>
+    <th>Dano</th>
+    <th>Nivel</th>
+    <th>User</th>
+  </tr>
+  <tr *ngFor="let personagem of personagens">
+    <td>{{ personagem.id }}</td>
+    <td>{{ personagem.dano }}</td>
+    <td>{{ personagem.nivel.fase }}</td>
+    <td>{{ personagem.user.nome }}</td>
+  </tr>
+</table>

@@ -1,0 +1,39 @@
+<mat-toolbar color="warn">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>SmartScholl</span>
+</mat-toolbar>
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/pages/user/cadastrar">
+        <mat-icon class="icon">person_add</mat-icon>
+        Cadastrar User
+      </a>
+      <a mat-list-item routerLink="/pages/user/listar">
+        <mat-icon class="icon">list</mat-icon>
+        Listar User
+      </a>
+      <a mat-list-item routerLink="/pages/personagem/cadastrar">
+        <mat-icon class="icon">add</mat-icon>
+        Cadastrar Personagem
+      </a>
+      <a mat-list-item routerLink="/pages/personagem/listar">
+        <mat-icon class="icon">list</mat-icon>
+        Listar Personagem
+      </a>
+      <a mat-list-item routerLink="/pages/nivel/cadastrar">
+        <mat-icon class="icon">add</mat-icon>
+        Cadastrar Nivel
+      </a>
+      <a mat-list-item routerLink="/pages/nivel/listar">
+        <mat-icon class="icon">list</mat-icon>
+        Listar Nivel
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet> </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
